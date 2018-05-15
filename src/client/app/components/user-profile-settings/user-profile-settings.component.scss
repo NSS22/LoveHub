@@ -1,0 +1,55 @@
+:host {
+  .profile-setting {
+    background: #e6ddf5;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    padding: .5em;
+    width: 105%;
+
+    .button-update {
+      height: 4vh;
+      width: 100%;
+      text-align: right;
+
+      input[type=button] {
+        width: 40%;
+        padding: 0 16px;
+        text-align: center;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #555b6e;
+        }
+
+        &:active {
+          background-color: #1a2580;
+        }
+      }
+    }
+  }
+
+  .modal-success {
+    height: 6vh;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #193952;
+    background: green;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .message {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+}

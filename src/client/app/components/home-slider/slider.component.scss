@@ -1,0 +1,41 @@
+.feedbacks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.slider-block{
+    margin: 0;
+    width: 100%;
+}
+.slider{
+    align-items: center;
+    padding: 0;
+}
+.custom-carousel{
+    width: 100%;
+}
+
+.height{
+    height:600px; 
+}
+
+@media (max-width: 1200px) {
+    .height{
+        height: 380px;
+    }
+}
+
+@media (max-width: 576px) {
+    .height{
+        height:250px; 
+    }
+    
+}
+
+
+@media (max-width: 440px) {
+    .height{
+        height:200px; 
+    }  
+}

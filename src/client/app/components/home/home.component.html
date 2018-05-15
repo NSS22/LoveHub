@@ -1,0 +1,62 @@
+<section id="registration">
+  <div class="reg-block">
+    <app-registration></app-registration>
+  </div>
+  <div class="video-block" [ngStyle]="{'max-height.px': videoHeight}">
+      <video autoplay loop class="d-none d-lg-block" id="video-background" muted plays-inline>
+          <source src="../../../assets/videos/3.mov" type="video/mp4">
+          Your browser does not support HTML5 video.
+      </video>
+  </div>
+</section>
+<section id='find'>
+  <div>
+    <h2 class="title">The way to find your true love starts here</h2>
+    <div class="find-items">
+      <div *ngFor="let item of reasons" class="find-block">
+        <div >
+            <img
+              class="find-image"
+              src={{item.image}}
+            />
+        </div>
+        <div class='find-info text-center text-md-left'>
+          <h3 class="find-info-title">{{item.title}}</h3>
+          <p class="find-info-text multiline">
+            {{item.text}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <home-slider iden='demo'>
+    <div *ngFor="let slider of slider; let i = index" class="carousel-item" [class.active]="i === 0">
+      <img src={{slider.image}} alt={{slider.title}} class='main-slide'>
+      <div class="carousel-caption">
+        <h3 class="slider-title">{{slider.title}}</h3>
+        <p class="multiline">{{slider.text}}</p>
+      </div>
+    </div>
+  </home-slider>
+</section>
+<section id='feedbacks'>
+  <h2 class="title">Some positive feedbacks from our users</h2>
+  <h3 class="subtitle">It's kinda surprising that feedbacks are always positive, isn`t it?</h3>
+  <div class="row feedbacks">
+    <div *ngFor="let feed of feedbacks;" class="feed-block">
+        <img
+          class="feed-block-image"
+          src="https://cdn.onlinewebfonts.com/svg/img_152532.png"
+        />
+        <div class='feed-block-info'>
+          <h3 class="feed-block-info-title">{{feed.title}}</h3>
+          <p class="feed-block-info-text">
+            {{feed.info}}
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+

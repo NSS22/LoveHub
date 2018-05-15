@@ -1,0 +1,58 @@
+<article class="search-page">
+  <section class="filter__container">
+    <div class="filter__component">
+      <app-user-filter
+        [label]="searchFilter.label" [type]="searchFilter.type" [name]="searchFilter.name"
+        [value]="searchFilter.value" [placeholder]="searchFilter.placeholder" (onSearch)="search($event)">
+      </app-user-filter>
+    </div>
+
+    <div class="filter__component">
+      <app-user-filter
+        [label]="ageFilter.label" [type]="ageFilter.type" [name]="ageFilter.name"
+        [placeholder]="ageFilter.placeholder" [value]="ageFilter.value" (onSearch)="search($event)">
+      </app-user-filter>
+      <span class="value">{{ !term ? ageFilter.value :
+          ((term.searchName == 'age') ? term.searchValue : ageFilter.value) }}
+        </span>
+    </div>
+
+    <div class="filter__component">
+      <app-user-filter
+        [label]="sexMFilter.label" [type]="sexMFilter.type" [name]="sexMFilter.name"
+        [placeholder]="sexMFilter.placeholder" [value]="sexMFilter.value" (onSearch)="search($event)">
+      </app-user-filter>
+
+      <app-user-filter
+        [label]="sexFFilter.label" [type]="sexFFilter.type" [name]="sexFFilter.name"
+        [placeholder]="sexFFilter.placeholder" [value]="sexFFilter.value" (onSearch)="search($event)">
+      </app-user-filter>
+    </div>
+  </section>
+
+  <section>
+    <section class="user__gallery" *ngIf="usersWithAva.length > 0">
+      <div class="user__container" *ngFor="let userWithAva of usersWithAva">
+        <figure class="user__img">
+          <img [src]="userWithAva.avatar" alt="User_Photo">
+        </figure>
+        <div class="user__description">
+          <div class="date">
+            <span>{{ userWithAva.userProfile.age }}</span>
+          </div>
+          <a class="nav-link menu-item" [routerLink]="['/profile', userWithAva.userProfile.userId]">
+            {{ userWithAva.userProfile.firstName }} {{ userWithAva.userProfile.lastName }}
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section class="pager" *ngIf="usersWithAva.length > 0">
+    <app-pager
+      [itemsPerPage]="itemsPerPage"
+      [countItems]="countItems"
+      [currentPage]="currentPage"
+      (pageChange)="onPageChange($event)">
+    </app-pager>
+  </section>
+</article>

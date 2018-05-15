@@ -1,0 +1,49 @@
+@import '../../../../assets/scss/colors.scss';
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-flex;
+    color: white;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.admin-panel-item {
+    background-color: #d3d3d3;
+    cursor: pointer;
+    padding: 5px 10px;
+    &:hover {
+      background-color: #a52a2a;
+      color: #fff;
+    }
+}
+
+.navbar-dark {
+    background-color: #555b6e;
+}

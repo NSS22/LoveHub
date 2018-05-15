@@ -1,0 +1,44 @@
+footer {
+  background-color: rgba(233, 236, 239, 0.9);
+}
+
+.authors {
+    background-color: #313335;
+    color: white;
+    padding: 15px 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.developers {
+    text-align: right;
+}
+
+.butt {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(245, 55, 55, 0.8);
+  color: white;
+  height: 40px;
+}
+.butt:hover {
+  font-size: 15px;
+  background-color: rgba(245, 55, 55, 0.9);
+}
+
+@media (max-width: 576px) {
+    .developers {
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .info .col-sm-4 {
+        padding: 10px 0;
+    }
+}
